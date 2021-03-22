@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>FlaredCloud</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='font/oswald.css' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Oswald';font-size: 16px;
+}
+</style>
+  </head>
+  <body class="container2">
+   <header>
+  <nav class="navbar navbar-inverse">
+
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">
+
+    <img src="img/img_logo.png" width="auto" height="25" alt="Alternative text">
+  </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="contactes.html">Contacte</a></li>
+      <li><a href="equip.html">Equip</a></li>
+      <li><a href="qui-som.html">Qui som</a></li>
+    </ul>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="input-group">
+        <input title="Search" type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit" value="Submit">Buscar&nbsp;
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+        </div>
+      </form>
+    </div>
+</nav>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <div class="menu-nav-desplegable">
+        <div class="dropdown">
+          <button type="submit" class="btn btn-default dropbtn">
+    <span class="glyphicon glyphicon-th-list"></span>
+</button>
+            <div class="dropdown-content">
+              <a href="index.html">Inicio</a>
+              <a href="video.html">Video</a>
+              <a href="audio.html">Audio</a>
+              <a href="llistat.html">Llistat</a>
+              <a href="geolocalitzacio.html">Geocalitzacio</a>
+            </div>
+        </div>
+      </div>  
+    </li>
+    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="video.html">Video</a></li>
+  </ol>
+   
+   </header>
+   <div class="navegacion-izq">
+   <div class="btn-group-vertical menu-buttons">
+		<a data-toggle="tooltip" title="Pulsa aqui para ir al menu de inicio" href="index.html" type="button" class="btn btn-primary single-button-menu">Inicio</a>
+		<a data-toggle="tooltip" title="Pulsa aqui para ir al menu de video" href="video.html" type="button" class="btn btn-primary single-button-menu">Video</a>
+		<a data-toggle="tooltip" title="Pulsa aqui para ir al menu de audio" href="audio.html" type="button" class="btn btn-primary single-button-menu">Audio</a>
+		<a data-toggle="tooltip" title="Pulsa aqui para ir al menu llistat" href="llistat.html" type="button" class="btn btn-primary single-button-menu">Llistat</a>
+		<a data-toggle="tooltip" title="Pulsa aqui para ir al menu de geolocalitzacio" href="geolocalitzacio.html" type="button" class="btn btn-primary single-button-menu">Geolocalitzacio</a>
+    <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+	</div>
+   </div>
+   <main>
+	 <div class="main_video">
+     <video controls>
+		<source src="media/video.mp4" type="video/mp4">
+		<source src="media/video.ogg" type="video/ogg">
+		Your browser does not support the video tag.
+	</video>
+	</div>
+  <div class="main_contenido">
+	<div class="main_titulo">
+	 <h1>Titulo del video</h1>
+  </div>
+  <div class="main_descripcion">
+	<p>Descripcion - es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+	</div>
+  <div class="main_comentarios">
+  <h1>Primer Comentario<p>Respuesta primer comentario</p></h1>
+  </div>
+</div>
+   </main>
+     <aside>
+		<div class="aside_miniaturas">
+		<ul>
+      <div class="aside-item">
+			<li><a href="video.html"><img src="img/miniatura-video.jpg" alt="Chania"><div class="aside-titulo">Titulo video</div></a></li></div>
+      <div class="aside-item">
+			<li><a href="video.html"><img src="img/miniatura-video.jpg" alt="Chania"><div class="aside-titulo">Titulo video</div></a></li></div>
+      <div class="aside-item">
+      <li><a href="video.html"><img src="img/miniatura-video.jpg" alt="Chania"><div class="aside-titulo">Titulo video</div></a></li></div>
+      <div class="aside-item">
+      <li><a href="video.html"><img src="img/miniatura-video.jpg" alt="Chania"><div class="aside-titulo">Titulo video</div></a></li></div>
+		</ul>
+		</div>
+	 </aside>
+    <footer class="bg-4 text-center">
+  <p>Copyright &#169; FlaredCloud <a href="index.html">www.flaredcloud.com</a></p>
+</footer>
+  </body>
+</html>
