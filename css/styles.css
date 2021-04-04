@@ -79,6 +79,20 @@ label {
       background: #FFEEEE;
 }
 
+:required{
+      border: 2px solid #990000;
+    }
+    :optional{
+      border: 2px solid #009999;
+}
+
+:in-range{
+      background: #EEEEFF;
+    }
+    :out-of-range{
+      background: #FFEEEE;
+}
+
 .main_ODS-main-photo img{
   display: block;
   margin-left: auto;
