@@ -96,31 +96,31 @@ body {
     </div>
     <div id="email">
 		  <label for="milista">Email: </label>
-      <input type="email" name="miemail" required>
+      <input type="email" name="miemail" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Ha de complir els requisits d'email xxx@xx.xx</div>
 		</div>
     <div id="telefon">
       <label for="milista">Telefon: </label>
-      <input type="tel" name="mitelefono" value="" required>
+      <input type="tel" name="mitelefono" pattern="^376-[3|7|8]+[0-9]{5}" value="376-" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Ha de començar per 376-Xxxxxx on X ha de ser 3, 7 o 8 i x del 0 al 9</div>
     </div>
     <div id="passwd">
       <label for="miclave">Contrasenya: </label>
-      <input type="password" name="miclave" id="miclave" required>
+      <input type="password" name="miclave" id="miclave" pattern="(?=.*[A-Z])(?=.*[0-9]{2}).{6,}" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Minim 6 chars, una majuscula i dos numeros com a minim</div>
     </div>
     <div id="dataNaix">
       <label for="mifecha">Data Naixement: </label>
-      <input type="date" name="mifecha" required>
+      <input type="date" name="mifecha" pattern="" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Omplenar</div>
     </div>
     <div id="adreca">
       <label for="minombre">Adreça: </label>
-      <input type="text" name="minombre" id="minombre" required>
+      <input type="text" name="minombre" id="minombre" pattern="" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Omplenar</div>
     </div>
     <div id="poblacio">
       <label for="minombre">Poblacio: </label>
-      <input type="text" name="minombre" id="minombre" required>
+      <input type="text" name="minombre" id="minombre" pattern="" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Omplenar</div>
     </div>
     <div id="pais">
       <label for="minombre">Pais: </label>
-      <input type="text" name="minombre" id="minombre" required>
+      <input type="text" name="minombre" id="minombre" pattern="" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Omplenar</div>
     </div>
     <div id="codiPostal">
       <label for="milista">Codi Postal: </label>
@@ -166,7 +166,7 @@ body {
     </div>
     <div id="numBanc">
       <label for="minombre">Numero de cuenta bancaria: </label>
-      <input type="text" name="minombre" id="minombre" required>
+      <input type="text" name="minombre" id="minombre" pattern="([0-9]){12}" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Ha de ser 12 numeros valids</div>
     </div>
     <div>
       <input id="btn" type="submit" value="Registrar" hidden>
