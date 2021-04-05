@@ -72,25 +72,48 @@ label {
     font-weight: 100;
 }
 
-:valid{
-      background: #EEEEFF;
-    }
-    :invalid{
-      background: #FFEEEE;
+/*
+
+Invalid, valid, optional, in range, out of-range
+*/
+
+#btn {
+  background: #99F0EA;
 }
 
-:required{
-      border: 2px solid #990000;
-    }
-    :optional{
-      border: 2px solid #009999;
+select {
+  background: #99F0EA;
 }
 
-:in-range{
-      background: #EEEEFF;
-    }
-    :out-of-range{
-      background: #FFEEEE;
+input:invalid{
+  background: #F9A48D;
+}
+
+input:required{
+  border: 2px solid #F9663F;
+}
+
+input:valid{
+  border: 2px solid #30DED2;
+  background: #99F0EA;
+}
+
+input:optional{
+  border: 2px solid #009999;
+}
+
+input:in-range{
+  background: #EEEEFF;
+}
+
+input:out-of-range{
+  background: #FFEEEE;
+}
+
+/**/
+input.blanco {
+  background: white;
+  border: 0px solid white;
 }
 
 .main_ODS-main-photo img{
