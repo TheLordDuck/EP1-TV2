@@ -35,9 +35,9 @@ $(document).ready(function(){
 
 
 //tendre que ordenarlo bien donde toque, en el modelo, vista o controlador, ya mirare
-var formulario, nom, cognom;
+var btn, formulario, nom, cognom;
 function iniciar(){
-  var btn = document.getElementById("btn");
+  btn = document.getElementById("btn");
   formulario = document.querySelector("form[name='miformulario']");
   nom = document.getElementById('nom').getElementsByTagName('input');
   cognom = document.getElementById('cognom').getElementsByTagName('input');
@@ -67,6 +67,7 @@ function iniciar(){
   
   nom[0].addEventListener("input", myfunc.validacion_nom);
   cognom[0].addEventListener("input", myfunc.validacion_cognom);
+  btn.onclick = crearCookie;
 }
 
 myfunc = function(){
@@ -100,5 +101,14 @@ myfunc = function(){
     updateRegisterButton:updateRegisterButton
   }
 }();
+
+function crearCookie(){
+  setCookie();
+}
+
+function setCookie(){
+  document.cookie = "user=Flavio";
+  alert(document.cookie);
+}
 
 addEventListener("load", iniciar);

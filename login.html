@@ -83,7 +83,7 @@ body {
    <main>
 	 <div class="main_contacte">
 		<section id="formulario">
-    <form id="form" name="miformulario" method="get" action="procesar.php">
+    <form id="form" name="miformulario">
 		<div><p>Formulari d'entrada de dades per un client</p>
 		</div>
     <div id="nom">
@@ -112,15 +112,15 @@ body {
     </div>
     <div id="adreca">
       <label for="minombre">Adreça: </label>
-      <input type="text" name="minombre" id="minombre" pattern="" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Omplenar</div>
+      <input type="text" name="minombre" id="minombre" pattern="[a-zA-Z]" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Omplenar</div>
     </div>
     <div id="poblacio">
       <label for="minombre">Poblacio: </label>
-      <input type="text" name="minombre" id="minombre" pattern="" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Omplenar</div>
+      <input type="text" name="minombre" id="minombre" pattern="[a-zA-Z]" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Omplenar</div>
     </div>
     <div id="pais">
       <label for="minombre">Pais: </label>
-      <input type="text" name="minombre" id="minombre" pattern="" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Omplenar</div>
+      <input type="text" name="minombre" id="minombre" pattern="[a-zA-Z]" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Omplenar</div>
     </div>
     <div id="codiPostal">
       <label for="milista">Codi Postal: </label>
@@ -169,7 +169,7 @@ body {
       <input type="text" name="minombre" id="minombre" pattern="([0-9]){12}" required><div style="visibility: hidden; display: inline;" id="cognomSuggestMessage">Ha de ser 12 numeros valids</div>
     </div>
     <div>
-      <input id="btn" type="submit" value="Registrar" hidden>
+      <input id="btn" type="button" value="Registrar" hidden>
     </div>
     </form>
   </section>
