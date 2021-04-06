@@ -71,7 +71,6 @@ function iniciar(){
 }
 
 myfunc = function(){
-  var flag = true;
   function validacion_nom(){
     if(!nom[0].checkValidity()){
       nomSuggestMessage.style.visibility = "visible";
@@ -107,7 +106,7 @@ function crearCookie(){
 }
 
 function setCookie(){
-  document.cookie = "user=Flavio";
+  document.cookie = "hacerAlgoUnaSolaVez=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
   alert(document.cookie);
 }
 
