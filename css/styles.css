@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: arial;
-}
 
+body {
+  font-family: 'Oswald';
+  font-size: 16px;
+}
 /* En dispositius petits, definir flex columnat */
 
 .menu-nav-desplegable{
@@ -77,7 +78,7 @@ label {
 Invalid, valid, optional, in range, out of-range
 */
 
-#btn {
+#btn, #btnCookie, #btnDeleteCookie{
   background: #99F0EA;
 }
 
@@ -91,6 +92,7 @@ input:invalid{
 
 input:required{
   border: 2px solid #F9663F;
+  background: #F9A48D;
 }
 
 input:valid{
@@ -102,12 +104,9 @@ input:optional{
   border: 2px solid #009999;
 }
 
-input:in-range{
-  background: #EEEEFF;
-}
-
 input:out-of-range{
-  background: #FFEEEE;
+  background: #F9A48D;
+  border: 2px solid #F9663F;
 }
 
 /**/
@@ -116,6 +115,11 @@ input.blanco {
   border: 0px solid white;
 }
 
+/*js*/
+.errorMessage{
+  display: inline;
+}
+/**/
 .main_ODS-main-photo img{
   display: block;
   margin-left: auto;
