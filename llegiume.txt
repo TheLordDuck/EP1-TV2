@@ -24,3 +24,5 @@ Video API (video.html) --- js/script_video.js
 Aqui hi han els 4 videos que demanes. He posat que s'activin directament, i els he mutejat, perque es una 
 musica i pot ser molest alhora de corretgir. Llavors per pausar o continuar amb el video haurem de passar 
 el ratoli pel video que volem pausar o continuar.
+
+Despres les funcionalitats de js esta comentada en cada arxiu js.
