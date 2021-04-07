@@ -147,6 +147,12 @@ input.blanco {
   text-align: justify;
 }
 
+.main_images a img{
+  width: 320px;
+  height: 200px;
+  margin: auto;
+}
+
 .map-container{
 overflow:hidden;
 padding-bottom:56.25%;
