@@ -32,7 +32,7 @@ body {
     </div>
     <ul class="nav navbar-nav">
       <li><a href="index.html">Inicio</a></li>
-      <li class="active"><a href="contactes.html">Contacte</a></li>
+      <li><a href="contactes.html">Contacte</a></li>
       <li><a href="equip.html">Equip</a></li>
       <li><a href="qui-som.html">Qui som</a></li>
     </ul>
@@ -58,34 +58,33 @@ body {
     <span class="glyphicon glyphicon-th-list"></span>
 </button>
             <div class="dropdown-content">
-              <a href="index.html">Inicio</a>
-              <a href="video.html">Video</a>
-              <a href="audio.html">Audio</a>
-              <a href="llistat.html">Llistat</a>
-              <a href="geolocalitzacio.html">Geocalitzacio</a>
+              <a href="login.html">Formulari</a>
+              <a href="fotos_js.html">Imatges en modal</a>
+              <a href="login2.html">Formulari Modal</a>
+              <a href="video.html">Video API</a>
             </div>
         </div>
       </div>  
     </li>
     <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-    <li class="breadcrumb-item"><a href="contactes.html">Contacte</a></li>
+    <li class="breadcrumb-item"><a href="login.html">Formulari</a></li>
   </ol>
    
    </header>
    <div class="navegacion-izq">
    <div class="btn-group-vertical menu-buttons">
-    <a href="index.html" type="button" class="btn btn-primary single-button-menu">Inicio</a>
-    <a href="video.html" type="button" class="btn btn-primary single-button-menu">Video</a>
-    <a href="audio.html" type="button" class="btn btn-primary single-button-menu">Audio</a>
-    <a href="llistat.html" type="button" class="btn btn-primary single-button-menu">Llistat</a>
-    <a href="geolocalitzacio.html" type="button" class="btn btn-primary single-button-menu">Geolocalitzacio</a>
+    <a href="login.html" type="button" class="btn btn-primary single-button-menu">Formulari</a>
+    <a href="fotos_js.html" type="button" class="btn btn-primary single-button-menu">Imatges en modal</a>
+    <a href="login2.html" type="button" class="btn btn-primary single-button-menu">Formulari Modal</a>
+    <a href="video.html" type="button" class="btn btn-primary single-button-menu">Video API</a>
   </div>
    </div>
    <main>
 	 <div class="main_contacte">
 		<section id="formulario">
     <form id="form" name="miformulario">
-		<div><p>Formulari d'entrada de dades per un client</p>
+		<div>
+      <p>Formulari d'entrada de dades per un client</p>
 		</div>
     <div>
       <label for="minombre">Nom: </label>
@@ -142,6 +141,7 @@ body {
         <option value="AD600">Sant Julia de Loria - AD600</option>
         <option value="AD700">Escaldes-Engordany - AD700</option>
       </select>
+      <div id="codiPostalSuggestMessage" class="errorMessage"></div>
     </div>
     <div id="tipusEsp">
       <label for="micasilla">Tipus d'espectacle interessat: </label>
@@ -160,6 +160,7 @@ body {
         <option value="0008">BancSabadell (0008)</option>
         <option value="0025">Vall Banc (0025)</option>
       </select>
+      <div id="codiBancariSuggestMessage" class="errorMessage"></div>
     </div>
     <div>
       <label for="milista">Codigo de sucursal: </label>
@@ -173,10 +174,12 @@ body {
         <option value="0001">Vall Banc (0001)</option>
         <option value="0002">Vall Banc (0002)</option>
       </select>
+      <div id="codiSucursalSuggestMessage" class="errorMessage"></div>
     </div>
     <div>
       <label for="minombre">Numero de cuenta bancaria: </label>
       <input id="numBanc" type="text" name="minombre" pattern="([0-9]){12}" required>
+      <div id="numBancSuggestMessage" class="errorMessage"></div>
     </div>
     <div>
       <input id="btn" type="button" value="Registrar" hidden>

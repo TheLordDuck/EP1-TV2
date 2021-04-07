@@ -37,7 +37,7 @@ body {
     </ul>
     <form class="navbar-form navbar-left" action="/action_page.php">
       <div class="input-group">
-        <input title="Search" type="text" class="form-control" placeholder="Search" name="search">
+        <input title="Search" type="text" class="form-control blanco" placeholder="Search" name="search">
         <div class="input-group-btn">
           <button class="btn btn-default" type="submit" value="Submit">Buscar&nbsp;
             <i class="glyphicon glyphicon-search"></i>
@@ -55,54 +55,61 @@ body {
     <span class="glyphicon glyphicon-th-list"></span>
 </button>
             <div class="dropdown-content">
-              <a href="index.html">Inicio</a>
-              <a href="video.html">Video</a>
-              <a href="audio.html">Audio</a>
-              <a href="llistat.html">Llistat</a>
-              <a href="geolocalitzacio.html">Geocalitzacio</a>
+              <a href="login.html">Formulari</a>
+              <a href="fotos_js.html">Imatges en modal</a>
+              <a href="login2.html">Formulari Modal</a>
+              <a href="video.html">Video API</a>
             </div>
         </div>
       </div>  
     </li>
     <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-    <li class="breadcrumb-item"><a href="video.html">Video</a></li>
+    <li class="breadcrumb-item"><a href="video.html">Video API</a></li>
   </ol>
    
    </header>
    <div class="navegacion-izq">
    <div class="btn-group-vertical menu-buttons">
-		<a data-toggle="tooltip" title="Pulsa aqui para ir al menu de inicio" href="index.html" type="button" class="btn btn-primary single-button-menu">Inicio</a>
-		<a data-toggle="tooltip" title="Pulsa aqui para ir al menu de video" href="video.html" type="button" class="btn btn-primary single-button-menu">Video</a>
-		<a data-toggle="tooltip" title="Pulsa aqui para ir al menu de audio" href="audio.html" type="button" class="btn btn-primary single-button-menu">Audio</a>
-		<a data-toggle="tooltip" title="Pulsa aqui para ir al menu llistat" href="llistat.html" type="button" class="btn btn-primary single-button-menu">Llistat</a>
-		<a data-toggle="tooltip" title="Pulsa aqui para ir al menu de geolocalitzacio" href="geolocalitzacio.html" type="button" class="btn btn-primary single-button-menu">Geolocalitzacio</a>
-    <script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();   
-});
-</script>
-	</div>
+    <a href="login.html" type="button" class="btn btn-primary single-button-menu">Formulari</a>
+    <a href="fotos_js.html" type="button" class="btn btn-primary single-button-menu">Imatges en modal</a>
+    <a href="login2.html" type="button" class="btn btn-primary single-button-menu">Formulari Modal</a>
+    <a href="video.html" type="button" class="btn btn-primary single-button-menu">Video API</a>
+  </div>
    </div>
-   <main>
+  <main>
 	 <div class="main_video">
-     <video controls>
-		<source src="media/video.mp4" type="video/mp4">
-		<source src="media/video.ogg" type="video/ogg">
-		Your browser does not support the video tag.
-	</video>
-	</div>
-  <div class="main_contenido">
-	<div class="main_titulo">
-	 <h1>Titulo del video</h1>
-  </div>
-  <div class="main_descripcion">
-	<p>Descripcion - es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
-	</div>
-  <div class="main_comentarios">
-  <h1>Primer Comentario<p>Respuesta primer comentario</p></h1>
-  </div>
-</div>
-   </main>
+    <p>Video 1</p>
+     <video id="video1" controls autoplay>
+		    <source src="media/video_js.mp4" type="video/mp4">
+		    <source src="media/video_js.ogg" type="video/ogg">
+		    Your browser does not support the video tag.
+	   </video>
+	 </div>
+   <div class="main_video">
+    <p>Video 2</p>
+     <video id="video2" controls autoplay>
+        <source src="media/video_js.mp4" type="video/mp4">
+        <source src="media/video_js.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+     </video>
+   </div>
+   <div class="main_video">
+    <p>Video 3</p>
+     <video id="video3" controls autoplay>
+        <source src="media/video_js.mp4" type="video/mp4">
+        <source src="media/video_js.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+     </video>
+   </div>
+   <div class="main_video">
+    <p>Video 4</p>
+     <video id="video4" controls autoplay>
+        <source src="media/video_js.mp4" type="video/mp4">
+        <source src="media/video_js.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+     </video>
+   </div>
+  </main>
      <aside>
 		<div class="aside_miniaturas">
 		<ul>
@@ -120,5 +127,6 @@ $(document).ready(function(){
     <footer class="bg-4 text-center">
   <p>Copyright &#169; FlaredCloud <a href="index.html">www.flaredcloud.com</a></p>
 </footer>
+<script src="js/script_video.js"></script>
   </body>
 </html>

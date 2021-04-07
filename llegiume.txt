@@ -1,0 +1,26 @@
+Utilitza el menu per anar a les diferents parts que demanes al TV2.1. 
+
+Opcions del menu
+
+Formulari (login.html) --- js/script.js
+Es el formulari d'entrada que demanas a la primera part del enunciat, he separat cada codi js per 
+a cada pagina per a que sigui mes facil de corretgit, i per a tenir un millor ordre. El nom de cada 
+js es troba al costat de cada titol del menu. Hi han tots els camps que demanes amb els patterns 
+que toca, quan el form estigui validat apareixera un boto per a fer el registre, que basicament trucara 
+a la funcio de crearCookie per a crear totoes les cookies amb els valors que ha posat l'usuari.
+Al fer click a registrar apareixeran dos botons mes, un per a veure les cookies amb un alert i l'altre 
+per a borrar-les, al borrar pots tornar a clicar en veure cookies i veuras que ja no hi estaran.
+
+Imatges en modal (fotos_js.html) --- js/script_imatges.js
+Aqui tinc les 4 imatges que demanes, que si pases el ratoli per sobre de qualsevol es cambiara la imatge 
+per una igual pero amb contrast de color negre. I aixi amb totes les imatges.Llavors quan fas click a una 
+imatge sobre la imatge en un modal amb un boto d'una creu on podras tancar el modal.
+
+Formulari Modal (login2.html) --- js/script_form2.js
+Aqui hi ha el formulari modal que demanes amb el login, username i password. Per activar el modal hauras 
+de clicar en el boto del main i fer el login, l'usuari i la password correctes son root per als dos.
+
+Video API (video.html) --- js/script_video.js
+Aqui hi han els 4 videos que demanes. He posat que s'activin directament, i els he mutejat, perque es una 
+musica i pot ser molest alhora de corretgir. Llavors per pausar o continuar amb el video haurem de passar 
+el ratoli pel video que volem pausar o continuar.
