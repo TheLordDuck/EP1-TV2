@@ -114,7 +114,7 @@ function validacion(input, errObj, errText){
     errObj.textContent = '';
   }
   //crido a la funcio per saber si despres dels canvis fets al input he de mostrar el boto 
-  updateRegisterButton();
+	updateRegisterButton();
 }
 
 //funcio que mostra el boto si el formulari esta validat
@@ -124,6 +124,8 @@ function updateRegisterButton(){
     btn.hidden = false;
   } else {
     btn.hidden = true;
+	btnCookie.hidden = true;
+	btnDeleteCookie.hidden = true;
   }
 }
 

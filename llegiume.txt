@@ -26,3 +26,5 @@ musica i pot ser molest alhora de corretgir. Llavors per pausar o continuar amb 
 el ratoli pel video que volem pausar o continuar.
 
 Despres les funcionalitats de js esta comentada en cada arxiu js.
+
+(^(AD))([0-9]{2})([-]{1})([0001|0008|0007|0025]{4})([-]{1})([0000|0001|0002|0003]{4})([-]{1})([0-9]{4})([-]{1})([0-9]{4})([-]{1})([0-9]{4})
