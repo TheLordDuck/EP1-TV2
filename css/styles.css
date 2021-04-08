@@ -127,6 +127,12 @@ input.blanco {
 .errorMessage{
   display: inline;
 }
+
+#iban
+{
+  width:300px;
+}
+
 /**/
 .main_ODS-main-photo img{
   display: block;

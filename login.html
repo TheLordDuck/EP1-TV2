@@ -131,16 +131,8 @@ body {
       <div id="paisSuggestMessage" class="errorMessage"></div>
     </div>
     <div>
-      <label for="milista">Codi Postal: </label>
-      <select id="codiPostal" name="milista">
-        <option value="AD100">Canillo - AD100</option>
-        <option value="AD200">Encamp - AD200</option>
-        <option value="AD300">Ordino - AD300</option>
-        <option value="AD400">La Massana - AD400</option>
-        <option value="AD500">Andorra La Vella - AD500</option>
-        <option value="AD600">Sant Julia de Loria - AD600</option>
-        <option value="AD700">Escaldes-Engordany - AD700</option>
-      </select>
+    	<label for="minombre">CodiPostal: </label>
+      <input id="codiPostal" type="text" name="minombre" pattern="(^(AD))([1|2|3|4|5|6|7]{1})(00)" required>
       <div id="codiPostalSuggestMessage" class="errorMessage"></div>
     </div>
     <div id="tipusEsp">
@@ -151,35 +143,9 @@ body {
       <div id="tipusEspSuggestMessage" class="errorMessage"></div>
     </div>
     <div>
-      <label for="milista">Codigo bancario: </label>
-      <select id="codiBancari" name="milista">
-        <option value="0001">AndBanc (0001)</option>
-        <option value="0003">Credit Andorra (0003)</option>
-        <option value="0004">MoraBanc (0004)</option>
-        <option value="0007">MoraBanc (0007)</option>
-        <option value="0008">BancSabadell (0008)</option>
-        <option value="0025">Vall Banc (0025)</option>
-      </select>
-      <div id="codiBancariSuggestMessage" class="errorMessage"></div>
-    </div>
-    <div>
-      <label for="milista">Codigo de sucursal: </label>
-      <select id="codiSucursal" name="milista">
-        <option value="0000">AndBanc (0000)</option>
-        <option value="1101">Credit Andorra (1101)</option>
-        <option value="0018">MoraBanc (0018)</option>
-        <option value="0019">MoraBanc (0019)</option>
-        <option value="0001">BancSabadell (0001)</option>
-        <option value="0002">BancSabadell (0002)</option>
-        <option value="0001">Vall Banc (0001)</option>
-        <option value="0002">Vall Banc (0002)</option>
-      </select>
-      <div id="codiSucursalSuggestMessage" class="errorMessage"></div>
-    </div>
-    <div>
-      <label for="minombre">Numero de cuenta bancaria: </label>
-      <input id="numBanc" type="text" name="minombre" pattern="([0-9]){12}" required>
-      <div id="numBancSuggestMessage" class="errorMessage"></div>
+      <label for="minombre">IBAN: </label>
+      <input id="iban" type="text" name="minombre" pattern="(^(AD))([0-9]{2})([-]{1})([0001|0008|0007|0025]{4})([-]{1})([0000|0001|0002|0003]{4})([-]{1})([0-9]{4})([-]{1})([0-9]{4})([-]{1})([0-9]{4})" required>
+      <div id="ibanSuggestMessage" class="errorMessage"></div>
     </div>
     <div>
       <input id="btn" type="button" value="Registrar" hidden>

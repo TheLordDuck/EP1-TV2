@@ -32,9 +32,7 @@ function iniciaVariables(){
   var poblacio = document.getElementById('poblacio');
   var pais = document.getElementById('pais');
   var codiPostal = document.getElementById("codiPostal");
-  var codiBancari = document.getElementById('codiBancari');
-  var codiSucursal = document.getElementById('codiSucursal');
-  var numBanc = document.getElementById('numBanc');
+  var iban = document.getElementById('iban');
 
   //missatges d'error personalitzats, que apareixen al costat de cada camp
   var nomSuggestMessage = document.getElementById('nomSuggestMessage');
@@ -47,9 +45,7 @@ function iniciaVariables(){
   var paisSuggestMessage = document.getElementById('paisSuggestMessage');
   var tipusEspSuggestMessage = document.getElementById('tipusEspSuggestMessage');
   var codiPostalSuggestMessage = document.getElementById('codiPostalSuggestMessage');
-  var codiBancariSuggestMessage = document.getElementById('codiBancariSuggestMessage');
-  var codiSucursalSuggestMessage = document.getElementById('codiSucursalSuggestMessage');
-  var numBancSuggestMessage = document.getElementById('numBancSuggestMessage');
+  var ibanSuggestMessage = document.getElementById('ibanSuggestMessage');
 }
 
 function associaDOMevents(){
@@ -81,17 +77,11 @@ function associaDOMevents(){
   pais.addEventListener('input', function() {
     validacion(pais, paisSuggestMessage, 'Primera en majuscula.');
   });
-  codiPostal.addEventListener('change', function() {
-    validacion(codiPostal, codiPostalSuggestMessage, 'Selecciona una.');
+  codiPostal.addEventListener('input', function() {
+    validacion(codiPostal, codiPostalSuggestMessage, 'Ha de ser AD100 o AD200 fins a AD700');
   });
-  codiBancari.addEventListener('change', function() {
-    validacion(codiBancari, codiBancariSuggestMessage, 'Selecciona una.');
-  });
-  codiSucursal.addEventListener('change', function() {
-    validacion(codiSucursal, codiSucursalSuggestMessage, 'Selecciona una.');
-  });
-  numBanc.addEventListener('input', function() {
-    validacion(numBanc, numBancSuggestMessage, 'Han de ser 12 lletres.');
+  iban.addEventListener('input', function() {
+    validacion(iban, ibanSuggestMessage, "Ha de ser de l'estil ADXX-YYYY-ZZZZ-AAAA-AAAA-AAAA, on XX es el codi de pais, YYYY el codi del banc, ZZZZ es la sucursal del banc i els 12 A els el codi del client. XX del 00 al 99, YYYY nomes poden ser 0001, 0007, 0008 o 0025 i ZZZZ nomes pot ser 0000, 0001, 0002 i 0003 despres A son valors del 0 al 9");
   });
 }
 
@@ -124,8 +114,8 @@ function updateRegisterButton(){
     btn.hidden = false;
   } else {
     btn.hidden = true;
-	btnCookie.hidden = true;
-	btnDeleteCookie.hidden = true;
+	 btnCookie.hidden = true;
+	 btnDeleteCookie.hidden = true;
   }
 }
 
@@ -149,9 +139,7 @@ function crearCookie(){
       document.cookie="Opcio"+(i+1)+"="+tipusEsp[i].value+"; expires=Thu, 31 Dec 9999 23:59:59 GMT";
     }
   }
-  document.cookie = "codiBancari="+codiBancari.value+"; expires=Thu, 31 Dec 9999 23:59:59 GMT";
-  document.cookie = "codiSucursal="+codiSucursal.value+"; expires=Thu, 31 Dec 9999 23:59:59 GMT";
-  document.cookie = "numBanc="+numBanc.value+"; expires=Thu, 31 Dec 9999 23:59:59 GMT";
+  document.cookie = "IBAN="+iban.value+"; expires=Thu, 31 Dec 9999 23:59:59 GMT";
   //mostrar botons de veurecookie i borrarcookie
   btnCookie.hidden = false;
   btnDeleteCookie.hidden = false;
@@ -178,9 +166,7 @@ function borrarCookie(){
   for(var i = 0; i < 3; i++){
     document.cookie = "Opcio"+(i+1)+"= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
   }
-  document.cookie = "codiBancari= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
-  document.cookie = "codiSucursal= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
-  document.cookie = "numBanc= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie = "IBAN= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 }
 
 ///Elements jquery
