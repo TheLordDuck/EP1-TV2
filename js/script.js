@@ -13,11 +13,13 @@ function iniciaVariables(){
   var email = document.getElementById('email');
   var telefon = document.getElementById('telefon');
   var password = document.getElementById('password');
+  var confirm_password = document.getElementById('confirm_password');
+  //confirm_password.setCustomValidity("Ha de ser igual a la password de dalt.");
   var dataNaix = document.getElementById('dataNaix');
   //faig el calcul aquest per a posar l'atribut max del input al dia actual
   var today = new Date();
   var dd = today.getDate();
-  var mm = today.getMonth()+1; //January is 0!
+  var mm = today.getMonth()+1; //Gener es el 0, per aixo sumo 1
   var yyyy = today.getFullYear();
   if(dd<10){
     dd='0'+dd
@@ -40,6 +42,7 @@ function iniciaVariables(){
   var emailSuggestMessage = document.getElementById('emailSuggestMessage');
   var telefonSuggestMessage = document.getElementById('telefonSuggestMessage');
   var passwordSuggestMessage = document.getElementById('passwordSuggestMessage');
+  var confirmPasswordSuggestMessage = document.getElementById('confirmPasswordSuggestMessage');
   var adrecaSuggestMessage = document.getElementById('adrecaSuggestMessage');
   var poblacioSuggestMessage = document.getElementById('poblacioSuggestMessage');
   var paisSuggestMessage = document.getElementById('paisSuggestMessage');
@@ -68,6 +71,7 @@ function associaDOMevents(){
   password.addEventListener('input', function() {
     validacion(password, passwordSuggestMessage, '2 numeros, 1 majuscula, i llargada minima de 6');
   });
+  confirm_password.oninput = verificarConfirmarPassword;
   adreca.addEventListener('input', function() {
     validacion(adreca, adrecaSuggestMessage, 'Primera en majuscula.');
   });
@@ -116,6 +120,16 @@ function updateRegisterButton(){
     btn.hidden = true;
 	 btnCookie.hidden = true;
 	 btnDeleteCookie.hidden = true;
+  }
+}
+
+function verificarConfirmarPassword(){
+  if(this.value != password.value || this.value==""){
+    this.setCustomValidity("Ha de ser igual a la password de dalt.");
+    confirmPasswordSuggestMessage.innerHTML = "Password ha de ser igual a la de dalt";
+  } else {
+    this.setCustomValidity("");
+    confirmPasswordSuggestMessage.textContent = '';
   }
 }
 
