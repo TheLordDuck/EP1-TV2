@@ -123,6 +123,10 @@ input.blanco {
   border: 0px solid white;
 }
 
+button {
+  color: black;
+}
+
 /*js*/
 .errorMessage{
   display: inline;
