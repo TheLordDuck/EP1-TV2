@@ -127,6 +127,19 @@ button {
   color: black;
 }
 
+a.paginationButton{
+-webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: black;
+background-color: white;
+margin:2px;
+padding:10px;
+}
+
+
 /*js*/
 .errorMessage{
   display: inline;

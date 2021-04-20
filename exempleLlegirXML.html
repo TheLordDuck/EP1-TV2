@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Exemple de recuperaci� de dades en XML </title>
+  <script>
+   // Crear objecte AJAX
+  function crearObjAJAX(){
+    var obj;
+    //Verificaci� del navegador
+    if(window.XMLHttpRequest) { // Navegadors actuals
+      obj = new XMLHttpRequest();
+    } else {
+      try { //Navegadors antics
+        obj = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      catch (e) {
+        alert('El navegador emprat no suporta AJAX');
+      }
+    }
+    return obj;
+  }
+// Funci� de lectura i presentaci� del resultat obtingut as�ncronament
+function llegirDadesXML(){
+  if (oXML.readyState == 4  && oXML.status == 200) { // L'estat = 4 disposem de la resposta del servidor
+    var xml  = oXML.responseXML.documentElement; // refer�ncia al XML rebut
+    var miDiv = document.getElementById('miDiv1'); //Referenciar el Div HTML
+    miDiv.innerHTML = ''; // buidar el contingut de DIV
+    // Recorrer l'arbre XML per extreure informaci� de cada usuari
+    for (i = 0; i < xml.getElementsByTagName('usuari').length; i++){
+      var item = xml.getElementsByTagName('usuari')[i]; //Un Node usuari en XML
+      var id = item.getElementsByTagName('id')[0].firstChild.data; //Id
+      var nom = item.getElementsByTagName('nom')[0].firstChild.data; //Nom
+      miDiv.innerHTML += '<a href="/usuari/'+id+'/">'+nom+'</a><br>'; //Preparar format d'enlla�
+    }
+  }
+}
+ //Petici� As�ncrona
+ function peticioAJAX(){
+      oXML = crearObjAJAX();
+	  oXML.onreadystatechange = llegirDadesXML;
+      oXML.open('post', 'usuaris.xml');
+      oXML.send('');
+    }
+  </script>
+</head>
+<body>
+  <div id="miDiv1">les dades apareixen aqui</div>
+  &nbsp;<br>
+  Pots visualitzar el codi amb F12 <br>
+  <button onclick="peticioAJAX()">Efectuar petici�</button>
+</body>
+</html>
