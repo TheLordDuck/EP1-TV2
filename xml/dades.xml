@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE RECULL SYSTEM "valida.dtd">
-<MEDIA>
-	<ARTISTA>
-		<NOM_USUARI>Usuari 1</NOM_USUARI>
-		<CREACIO_COMPTE>14/10/2012</CREACIO_COMPTE>
+<!DOCTYPE PLATAFORMA SYSTEM "valida.dtd">
+<PLATAFORMA>
+	<CANAL id="id_001">
+		<NOM_CANAL>Canal Usuari 1</NOM_CANAL>
+		<DATA_CREACIO_CANAL>
+			<DIA>14</DIA>
+			<MES>10</MES>
+			<ANY>2012</ANY>
+		</DATA_CREACIO_CANAL>
+		<LINK>https://paginaweb.com/user1</LINK>
 		<VIDEO> 
 			<TITOL>Video 1 usuari 1</TITOL>
 			<DESCRIPCIO>Descripcio del video 1 del usuari 1</DESCRIPCIO>
@@ -19,10 +24,15 @@
 			<DESCRIPCIO>Descripcio del video 3 del usuari 1</DESCRIPCIO>
 			<DATA_PUBLICACIO>05/02/2013</DATA_PUBLICACIO>
 		</VIDEO>
-	</ARTISTA>
-	<ARTISTA>
-		<NOM_USUARI>Usuari 2</NOM_USUARI>
-		<CREACIO_COMPTE>25/10/2014</CREACIO_COMPTE>
+	</CANAL>
+	<CANAL id="id_002">
+		<NOM_CANAL>Canal Usuari 2</NOM_CANAL>
+		<DATA_CREACIO_CANAL>
+			<DIA>25</DIA>
+			<MES>10</MES>
+			<ANY>2014</ANY>
+		</DATA_CREACIO_CANAL>
+		<LINK>https://paginaweb.com/user2</LINK>
 		<VIDEO> 
 			<TITOL>Video 1 usuari 2</TITOL>
 			<DESCRIPCIO>Descripcio del video 1 del usuari 2</DESCRIPCIO>
@@ -38,10 +48,15 @@
 			<DESCRIPCIO>Descripcio del video 3 del usuari 2</DESCRIPCIO>
 			<DATA_PUBLICACIO>12/05/2015</DATA_PUBLICACIO>
 		</VIDEO>
-	</ARTISTA>
-	<ARTISTA>
-		<NOM_USUARI>Usuari 3</NOM_USUARI>
-		<CREACIO_COMPTE>12/10/2010</CREACIO_COMPTE>
+	</CANAL>
+	<CANAL id="id_003">
+		<NOM_CANAL>Canal Usuari 3</NOM_CANAL>
+		<DATA_CREACIO_CANAL>
+			<DIA>12</DIA>
+			<MES>10</MES>
+			<ANY>2010</ANY>
+		</DATA_CREACIO_CANAL>
+		<LINK>https://paginaweb.com/user3</LINK>
 		<VIDEO> 
 			<TITOL>Video 1 usuari 3</TITOL>
 			<DESCRIPCIO>Descripcio del video 1 del usuari 3</DESCRIPCIO>
@@ -57,5 +72,5 @@
 			<DESCRIPCIO>Descripcio del video 3 del usuari 3</DESCRIPCIO>
 			<DATA_PUBLICACIO>05/02/2013</DATA_PUBLICACIO>
 		</VIDEO>
-	</ARTISTA>
-</MEDIA>
+	</CANAL>
+</PLATAFORMA>
