@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
+<xml>  
+ <usuari>  
+  <id>1</id>  
+  <nom>Eloi</nom>  
+ </usuari>  
+ <usuari>  
+  <id>2</id>  
+  <nom>Pere</nom>  
+ </usuari>  
+ <usuari>  
+  <id>3</id>  
+  <nom>Joan</nom>  
+ </usuari> 
+<usuari>  
+  <id>4</id>  
+  <nom>Loli</nom>  
+ </usuari>  
+<usuari>  
+  <id>5</id>  
+  <nom>Paku</nom>  
+ </usuari> 
+</xml>   
+  

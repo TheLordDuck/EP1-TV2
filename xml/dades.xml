@@ -73,4 +73,52 @@
 			<DATA_PUBLICACIO>05/02/2013</DATA_PUBLICACIO>
 		</VIDEO>
 	</CANAL>
+	<CANAL id="id_004">
+		<NOM_CANAL>Canal Usuari 4</NOM_CANAL>
+		<DATA_CREACIO_CANAL>
+			<DIA>12</DIA>
+			<MES>10</MES>
+			<ANY>2010</ANY>
+		</DATA_CREACIO_CANAL>
+		<LINK>https://paginaweb.com/user3</LINK>
+		<VIDEO> 
+			<TITOL>Video 1 usuari 4</TITOL>
+			<DESCRIPCIO>Descripcio del video 1 del usuari 4</DESCRIPCIO>
+			<DATA_PUBLICACIO>11/11/2011</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 2 usuari 4</TITOL>
+			<DESCRIPCIO>Descripcio del video 2 del usuari 4</DESCRIPCIO>
+			<DATA_PUBLICACIO>14/08/2012</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 3 usuari 4</TITOL>
+			<DESCRIPCIO>Descripcio del video 3 del usuari 4</DESCRIPCIO>
+			<DATA_PUBLICACIO>05/02/2013</DATA_PUBLICACIO>
+		</VIDEO>
+	</CANAL>
+	<CANAL id="id_005">
+		<NOM_CANAL>Canal Usuari 5</NOM_CANAL>
+		<DATA_CREACIO_CANAL>
+			<DIA>12</DIA>
+			<MES>10</MES>
+			<ANY>2010</ANY>
+		</DATA_CREACIO_CANAL>
+		<LINK>https://paginaweb.com/user5</LINK>
+		<VIDEO> 
+			<TITOL>Video 1 usuari 5</TITOL>
+			<DESCRIPCIO>Descripcio del video 1 del usuari 5</DESCRIPCIO>
+			<DATA_PUBLICACIO>11/11/2011</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 2 usuari 5</TITOL>
+			<DESCRIPCIO>Descripcio del video 2 del usuari 5</DESCRIPCIO>
+			<DATA_PUBLICACIO>14/08/2012</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 3 usuari 5</TITOL>
+			<DESCRIPCIO>Descripcio del video 3 del usuari 5</DESCRIPCIO>
+			<DATA_PUBLICACIO>05/02/2013</DATA_PUBLICACIO>
+		</VIDEO>
+	</CANAL>
 </PLATAFORMA>
