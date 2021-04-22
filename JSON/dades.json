@@ -1,0 +1,128 @@
+{"plataforma": {
+    "canal": [
+    {
+        "nom_canal": "Canal Usuari 1",
+        "data_creacio_canal": {
+            "dia": 14,
+            "mes": 10,
+            "any": 2012
+        },
+        "link": "https://paginaweb.com/user1",
+        "video": [
+        {
+            "titol": "Video 1 usuari 1",
+            "descripcio": "Descripcio del video 1 del usuari 1",
+            "data_publicacio": "28/10/2012"
+        },
+        {
+            "titol": "Video 2 usuari 1",
+            "descripcio": "Descripcio del video 2 del usuari 1",
+            "data_publicacio": "02/11/2012"
+        },
+        {
+            "titol": "Video 3 usuari 1",
+            "descripcio": "Descripcio del video 3 del usuari 1",
+            "data_publicacio": "05/02/2013"
+        }]
+    },
+    {
+        "nom_canal": "Canal Usuari 2",
+        "data_creacio_canal": {
+            "dia": 14,
+            "mes": 10,
+            "any": 2012
+        },
+        "link": "https://paginaweb.com/user2",
+        "video": [
+        {
+            "titol": "Video 1 usuari 2",
+            "descripcio": "Descripcio del video 1 del usuari 2",
+            "data_publicacio": "28/10/2012"
+        },
+        {
+            "titol": "Video 2 usuari 2",
+            "descripcio": "Descripcio del video 2 del usuari 2",
+            "data_publicacio": "02/11/2012"
+        },
+        {
+            "titol": "Video 3 usuari 2",
+            "descripcio": "Descripcio del video 3 del usuari 2",
+            "data_publicacio": "05/02/2013"
+        }]
+    },
+    {
+        "nom_canal": "Canal Usuari 3",
+        "data_creacio_canal": {
+            "dia": 14,
+            "mes": 10,
+            "any": 2012
+        },
+        "link": "https://paginaweb.com/user3",
+        "video": [
+        {
+            "titol": "Video 1 usuari 3",
+            "descripcio": "Descripcio del video 1 del usuari 3",
+            "data_publicacio": "28/10/2012"
+        },
+        {
+            "titol": "Video 2 usuari 3",
+            "descripcio": "Descripcio del video 2 del usuari 3",
+            "data_publicacio": "02/11/2012"
+        },
+        {
+            "titol": "Video 3 usuari 3",
+            "descripcio": "Descripcio del video 3 del usuari 3",
+            "data_publicacio": "05/02/2013"
+        }]
+    },
+    {
+        "nom_canal": "Canal Usuari 4",
+        "data_creacio_canal": {
+            "dia": 14,
+            "mes": 10,
+            "any": 2012
+        },
+        "link": "https://paginaweb.com/user4",
+        "video": [
+        {
+            "titol": "Video 1 usuari 4",
+            "descripcio": "Descripcio del video 1 del usuari 4",
+            "data_publicacio": "28/10/2012"
+        },
+        {
+            "titol": "Video 2 usuari 4",
+            "descripcio": "Descripcio del video 2 del usuari 4",
+            "data_publicacio": "02/11/2012"
+        },
+        {
+            "titol": "Video 3 usuari 4",
+            "descripcio": "Descripcio del video 3 del usuari 4",
+            "data_publicacio": "05/02/2013"
+        }]
+    },
+    {
+        "nom_canal": "Canal Usuari 5",
+        "data_creacio_canal": {
+            "dia": 14,
+            "mes": 10,
+            "any": 2012
+        },
+        "link": "https://paginaweb.com/user5",
+        "video": [
+        {
+            "titol": "Video 1 usuari 5",
+            "descripcio": "Descripcio del video 1 del usuari 5",
+            "data_publicacio": "28/10/2012"
+        },
+        {
+            "titol": "Video 2 usuari 5",
+            "descripcio": "Descripcio del video 2 del usuari 5",
+            "data_publicacio": "02/11/2012"
+        },
+        {
+            "titol": "Video 3 usuari 5",
+            "descripcio": "Descripcio del video 3 del usuari 5",
+            "data_publicacio": "05/02/2013"
+        }]
+    }]
+}}

@@ -8,10 +8,18 @@ function iniciaVariables(){
 	var pXML = document.getElementById("pXML");
 	var divPagination = document.getElementById("pagination");
 	var taulaInfo = document.getElementById('taulaInfo'); //Referenciar el Div HTML
+	var netejarBtn = document.getElementById('netejarBtn');
 }
 
 function associaDOMevents(){
 	pXML.onclick = peticioAJAX;
+	netejarBtn.onclick = netejarTaula;
+}
+
+function netejarTaula(){
+	var divPagination = document.getElementById("pagination");
+	divPagination.innerHTML = '';
+	taulaInfo.innerHTML = '';
 }
 
 function crearObjAJAX(){

@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Oswald';
   font-size: 16px;
@@ -616,4 +615,8 @@ h1 {
     font-size: 0;
     white-space: nowrap;
     z-index: 0;
+}
+
+.table-hover>tbody>tr:hover{
+  background-color:grey;
 }
