@@ -16,7 +16,8 @@ body {
     font-family: 'Oswald';font-size: 16px;
 }
 </style>
-
+<script src="js/llegirXML-JSON.js"></script>
+<script src="js/taula.js"></script>
   </head>
   <body class="container2">
    <header>
@@ -27,7 +28,7 @@ body {
     <div class="navbar-header">
       <a class="navbar-brand" href="index.html">
 
-    <img src="img/img_logo.png" width="auto" height="25" alt="">
+    <img src="img/img_logo.png" width="auto" height="25" alt="Alternative text">
   </a>
     </div>
     <ul class="nav navbar-nav">
@@ -40,17 +41,15 @@ body {
       <div class="input-group">
         <input type="text" class="form-control blanco" placeholder="Search" name="search">
         <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
+          <button class="btn btn-default" type="submit" value="Submit">Buscar&nbsp;
             <i class="glyphicon glyphicon-search"></i>
           </button>
         </div>
-      </div>
-    </form>
-
-  </div>
-
+        </div>
+      </form>
+    </div>
 </nav>
-  <ol class="breadcrumb">
+    <ol class="breadcrumb">
     <li class="breadcrumb-item">
       <div class="menu-nav-desplegable">
         <div class="dropdown">
@@ -58,16 +57,16 @@ body {
     <span class="glyphicon glyphicon-th-list"></span>
 </button>
             <div class="dropdown-content">
-              <a href="index.html">Inicio</a>
-              <a href="video.html">Video</a>
-              <a href="audio.html">Audio</a>
-              <a href="llistat.html">Llistat</a>
-              <a href="geolocalitzacio.html">Geocalitzacio</a>
+              <a href="login.html">Formulari</a>
+              <a href="fotos_js.html">Imatges en modal</a>
+              <a href="login2.html">Formulari Modal</a>
+              <a href="video.html">Video API</a>
             </div>
         </div>
       </div>  
     </li>
     <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="video.html">Parsing XML-JSON</a></li>
   </ol>
    
    </header>
@@ -79,30 +78,30 @@ body {
     <a href="video.html" type="button" class="btn btn-primary single-button-menu">Video API</a>
   </div>
    </div>
-   <main>
-    <div class="main_text">
-      <p>Utilitza el menu per anar a les diferents parts que demanes al TV2.1. El que esta escrit a continuacio es el que hi ha al llegeix-me de la carpeta, per a que sigui mes comode per a tu tenir una guia de les coses que has de corretgir.<br><br>Opcions del menu</p>
-      <p>Formulari (login.html) --- js/script.js<br>Es el formulari d'entrada que demanas a la primera part del enunciat, he separat cada codi js per a cada pagina per a que sigui mes facil de corretgit, i per a tenir un millor ordre. El nom de cada js es troba al costat de cada titol del menu.<br>Hi han tots els camps que demanes amb els patterns que toca, quan el form estigui validat apareixera un boto per a fer el registre, que basicament trucara a la funcio de crearCookie per a crear totoes les cookies amb els valors que ha posat l'usuari.<br>Al fer click a registrar apareixeran dos botons mes, un per a veure les cookies amb un alert i l'altre per a borrar-les, al borrar pots tornar a clicar en veure cookies i veuras que ja no hi estaran.</p>
-      <p>Imatges en modal (fotos_js.html) --- js/script_imatges.js<br>Aqui tinc les 4 imatges que demanes, que si pases el ratoli per sobre de qualsevol es cambiara la imatge per una igual pero amb contrast de color negre. I aixi amb totes les imatges.<br>Llavors quan fas click a una imatge sobre la imatge en un modal amb un boto d'una creu on podras tancar el modal.</p>
-      <p>Formulari Modal (login2.html) --- js/script_form2.js<br>Aqui hi ha el formulari modal que demanes amb el login, username i password.<br>Per activar el modal hauras de clicar en el boto del main i fer el login, l'usuari i la password correctes son root per als dos.</p>
-      <p>Video API (video.html) --- js/script_video.js<br>Aqui hi han els 4 videos que demanes. He posat que s'activin directament, i els he mutejat, perque es una musica i pot ser molest alhora de corretgir. Llavors per pausar o continuar amb el video haurem de passar el ratoli pel video que volem pausar o continuar.</p>
-      <p>Les funcionalitats de js estan comentades en cada arxiu js.</p>
+  <main>
+	<div id="pagination">
+	</div>
+	<div id="taulaInfo" class="table-responsive">
     </div>
+
+  <button id="pXML">Import XML</button>
+  <button id="pJSON">Import JSON</button>
+  <button id="netejarBtn">Netejar Taula</button>
    </main>
      <aside>
-    <div class="aside_miniaturas">
-    <ul>
+		<div class="aside_miniaturas">
+		<ul>
+      <div class="aside-item">
+			<li><a href="video.html"><img src="img/miniatura-video.jpg" alt="Chania"><div class="aside-titulo">Titulo video</div></a></li></div>
+      <div class="aside-item">
+			<li><a href="video.html"><img src="img/miniatura-video.jpg" alt="Chania"><div class="aside-titulo">Titulo video</div></a></li></div>
       <div class="aside-item">
       <li><a href="video.html"><img src="img/miniatura-video.jpg" alt="Chania"><div class="aside-titulo">Titulo video</div></a></li></div>
       <div class="aside-item">
       <li><a href="video.html"><img src="img/miniatura-video.jpg" alt="Chania"><div class="aside-titulo">Titulo video</div></a></li></div>
-      <div class="aside-item">
-      <li><a href="video.html"><img src="img/miniatura-video.jpg" alt="Chania"><div class="aside-titulo">Titulo video</div></a></li></div>
-      <div class="aside-item">
-      <li><a href="video.html"><img src="img/miniatura-video.jpg" alt="Chania"><div class="aside-titulo">Titulo video</div></a></li></div>
-    </ul>
-    </div>
-   </aside>
+		</ul>
+		</div>
+	 </aside>
     <footer class="bg-4 text-center">
   <p>Copyright &#169; FlaredCloud <a href="index.html">www.flaredcloud.com</a></p>
 </footer>

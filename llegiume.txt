@@ -1,0 +1,20 @@
+Carpeta XML/ 
+	Hi ha tant el arxiu dades.xml com el valida.dtd que valida el document XML
+
+Carpeta JSON/
+	Hi ha l'arxiu dades.json
+
+Carpeta js/
+	taula.js --> es l'encarregat de generar la taula paginada.
+
+	llegirXML-JSON --> es l'encarrega que pulsant el boto de Import XML de la web 
+		llegeixi el document XML i crei la taula. O el botó Import JSON de la web
+		que llegeix el document JSON i crea la taula.
+
+		Despres hi ha un boto de netejar el div i reiniciar tot com estava.
+
+Carpeta XLS/
+	Hi ha el document dades.xls que he importat del XML
+
+
+index.html --> hi han els botons que permeten mostrar o netejar les taules

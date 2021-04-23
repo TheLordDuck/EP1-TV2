@@ -1,9 +1,0 @@
-{ "empleats" : [
- { "Nom":"Sergi" , "Cognom":"Perez" },
- { "Nom":"Anna" , "Cognom":"Cardu" },
- { "Nom":"Sergi" , "Cognom":"Alvarez" },
- { "Nom":"Lluis" , "Cognom":"Cardu" },
- { "Nom":"Alba" , "Cognom":"Tros" },
- { "Nom":"Joana" , "Cognom":"Vazquez" },
- { "Nom":"Pep" , "Cognom":"Orro" } ]}
- 
