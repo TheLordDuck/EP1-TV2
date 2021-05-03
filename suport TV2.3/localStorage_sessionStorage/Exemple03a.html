@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Exemples SessionStorage </title>
+<script>
+window.onload = function() {
+window.sessionStorage.setItem('Nom','Pepo');
+window.sessionStorage.setItem('CogNom','Perez');
+window.sessionStorage.setItem('Edat',33);
+var cadena="";
+for (i=0; i<=sessionStorage.length-1; i++) {
+    key = sessionStorage.key(i);
+	cadena+='<li>'+key +' conte '+ sessionStorage.getItem(key)+'</li>'; 
+}
+document.getElementById("missatge").innerHTML = cadena;
+
+}
+
+</script>
+<h1>Exemple sessionStorage</h1>
+<h1>Dades en SessionStorage : </h1>
+<div id="missatge"></div>

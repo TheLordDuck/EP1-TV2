@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Exemples localstorage </title>
+<script>
+function llistat() {
+	document.getElementById("llistat").innerHTML="";
+	for (i=0; i<=localStorage.length-1; i++) {
+		key = localStorage.key(i);
+		document.getElementById("llistat").innerHTML +=('<p>'+key +' conte '+ localStorage.getItem(key)+'</p>' );
+	}
+}
+function novaClau(){
+var clau=document.getElementById("clau").value;
+var valor=document.getElementById("valor").value;
+localStorage.setItem(clau,valor);
+}
+
+function enregistrar(){
+ localStorage.nom = document.getElementById("nom").value;
+ localStorage.password = document.getElementById("password").value;
+}
+
+function neteja(){
+ localStorage.clear();
+}
+
+function llegirDades(){
+ if ((localStorage.nom != undefined) && (localStorage.password != undefined)) {
+  document.getElementById("dades").innerHTML = "nom: " + localStorage.nom + "<br/> Password: " + localStorage.password;
+ }
+ else{
+  document.getElementById("dades").innerHTML = "No has introduit el nom i/o el password";
+ }
+} 
+</script>
+<body>
+<h1>Exemple localStorage</h1>
+<form>
+<label for="nom"> nom: </label>
+ <input type="text" id="nom" />
+ <label for="password"> Password: </label>
+ <input type="text" id="password" />
+ <input type="button" onclick="enregistrar()" value="Guardar dades" />
+ </p>
+ <input type="button" onclick="neteja()" value="Neteja localStorage" />
+ <p id="dades"> Veure dades actuals de localstorage </p>
+ <input type="button" onclick="llegirDades()" value="Recuperar dades" />
+ <P>=======================================================================</p>
+ <label for="clau"> Nova Clau : </label>
+ <input type="text" id="clau" />
+ <label for="valor"> Valor : </label>
+ <input type="text" id="valor" />
+ <input type="button" onclick="novaClau()" value="Guardar nova clau" />
+ </p>
+ <input type="button" onclick="llistat()" value="Llistat de tot localstorage" />
+ <p id="llistat"> Veure dades actuals de localstorage en general</p>
+ 
+</form>

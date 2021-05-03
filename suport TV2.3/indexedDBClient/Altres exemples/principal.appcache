@@ -1,0 +1,12 @@
+CACHE MANIFEST
+#Indicar la versió 
+#ver 1.0
+
+CACHE:
+indexoffline.html
+codi.js
+
+NETWORK:
+
+FALLBACK:
+offline.html

@@ -1,0 +1,2 @@
+L'enllaç amb el mateix nom permet 'esquivar' el CORS.
+D'aquesta forma podeu provar en exemples.ua.ad els exemples bloquejats per CORS.

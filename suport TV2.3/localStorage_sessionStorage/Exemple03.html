@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Exemples localstorage </title>
+<script>
+window.onload = function() {
+window.localStorage.setItem('Nom','Pepo');
+window.localStorage.setItem('CogNom','Perez');
+window.localStorage.setItem('Edat',33);
+var cadena="";
+for (i=0; i<=localStorage.length-1; i++) {
+    key = localStorage.key(i);
+	cadena+='<li>'+key +' conte '+ localStorage.getItem(key)+'</li>'; 
+}
+document.getElementById("missatge").innerHTML = cadena;
+
+}
+
+</script>
+<h1>Exemple localStorage</h1>
+<h1>Dades en localStorage : </h1>
+<div id="missatge"></div>

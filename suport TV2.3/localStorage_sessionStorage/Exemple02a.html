@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Exemples localstorage </title>
+<script>
+window.onload = function() {
+document.getElementById("missatge").innerHTML ="";
+if(window.localStorage != undefined ){
+	document.getElementById("missatge").innerHTML ="<h2> unaVar val : "+localStorage.getItem("unaVar")+"</h2>";
+	localStorage.removeItem("unaVar"); //Elimina contingut
+}
+}
+</script>
+<h1>Exemple localStorage</h1>
+<div id="missatge"></div>
+<h3>s'ha eliminat unaVAR, per verificar, actualitza aquesta mateixa pagina</h3>

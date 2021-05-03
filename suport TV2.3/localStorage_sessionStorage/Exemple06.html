@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Exemple SessionStorage + CALLBACK</title>
+<script>
+function llistat() {
+	document.getElementById("llistat").innerHTML="";
+	for (i=0; i<=sessionStorage.length-1; i++) {
+		key = sessionStorage.key(i);
+		document.getElementById("llistat").innerHTML +=('<p>'+key +' conte '+ sessionStorage.getItem(key)+'</p>' );
+	}
+}
+
+function enregistrar(){
+ sessionStorage.nom = document.getElementById("nom").value;
+ sessionStorage.password = document.getElementById("password").value;
+}
+
+function llegirDades(){
+ if ((sessionStorage.nom != undefined) && (sessionStorage.password != undefined)) {
+  document.getElementById("dades").innerHTML = "nom: " + sessionStorage.nom + "<br/> Password: " + sessionStorage.password;
+ }
+ else{
+  document.getElementById("dades").innerHTML = "No has introduit el nom i/o el password";
+ }
+ }
+ 
+function altaLlistat(f1,f2){
+//Funció que truca a dues funcions CALLBACK de forma síncrona
+//Primera funció CALLBACK a invocar
+	if ((f1) && (typeof f1 === 'function')){
+		f1();
+    }
+	if ((f2) && (typeof f2 === 'function')){
+	//Segona funció CALLBACK a invocar
+		f2();
+    }
+}
+ 
+</script>
+<body>
+<h1>Exemple sessionStorage</h1>
+<h2>Tot el codi és estrictament el mateix que en Exemple04.html, però aquest cop en SessionStorage</h2>
+<h4>Proveu d'obrir la pàgina des de una altre pestanya i/o d'un altre navegador, o tanqueu i obriu novament la sessió</h4> 
+<h4><b>Proveu també d'obrir en la mateixa finestra l'exemple03a.html (afegeix 3 parelles key:value) i després actualitzar Exemple06.html, veure dades actuals</b></h4>
+<form>
+<label for="nom"> nom: </label>
+ <input type="text" id="nom" />
+ <label for="password"> Password: </label>
+ <input type="text" id="password" />
+ <input type="button" onclick="altaLlistat(enregistrar, llistat)" value="Guardar dades" />
+ 
+ <p id="dades"> Veure dades actuals de sessionStorage </p>
+ <input type="button" onclick="llegirDades()" value="Recuperar dades" />
+ 
+ <p id="llistat"> Veure dades actuals de sessionStorage </p>
+ <input type="button" onclick="llistat()" value="Llistat de tot sessionStorage" />
+ 
+ 
+</form>

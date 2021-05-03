@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Exemples localstoragec</title>
+<script>
+window.onload = function() {
+document.getElementById("missatge").innerHTML ="";
+if(window.localStorage != undefined ){
+	document.getElementById("missatge").innerHTML ="<h1>LocalStorage Funciona en aquest navegador</h1>";
+}
+
+}
+</script>
+<h1>Exemple localStorage</h1>
+<h2> Feu F12 aneu a 'Application' per veure tot el emmagatzematge en local (localStoragr, sessionStorage, IndexedDB)</h2>
+<div id="missatge"></div>

@@ -421,6 +421,10 @@ main {
   border-right: 1px solid grey;
 }
 
+main input{
+  color: black;
+}
+
 .navegacion-izq{
   grid-area:nav;  
   background-color: rgba(40,38,38);
