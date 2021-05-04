@@ -6,15 +6,20 @@ window.onload = function()  {
 	var importar = document.getElementById("importarXML");
 	var llistarNomCanal = document.getElementById("llistarNomCanal");
 	var llistarNomLloc = document.getElementById("llistarNomLloc");
+	var llistarTitolVideo = document.getElementById("llistarTitolVideo");
 	var afegir = document.getElementById("afegir");
 	var netejar = document.getElementById("netejar");
+
+	var mymap;
 
 	importar.onclick = peticioAJAX_XML;
 	llistarNomCanal.onclick = llistatComplertByName;
 	llistarNomLloc.onclick = llistatComplertByLloc;
+	llistarTitolVideo.onclick = llistatComplertByTitolVideo;
 	afegir.onclick = add;
 	netejar.onclick = netejaDB;
-	startDB(); // Creació/Obertura de la BD			
+	startDB(); // Creació/Obertura de la BD		
+	mapat();	
 }
 
 //Funció de creació 
@@ -35,6 +40,7 @@ function startDB() {
 		//object.createIndex('datacreacio', { unique : false });
 		//object.createIndex('link', { unique : false });
 		object.createIndex('by_nomlloc', 'nomlloc', { unique : false });
+		object.createIndex('by_titolvideo', 'titolvideo', { unique : false });
 		//object.createIndex('latitud', { unique : false });
 		//object.createIndex('longitud', { unique : false });
 	};
@@ -97,6 +103,9 @@ function add() {
 		datacreacio : document.querySelector('#datacreacio').value,
 		link : document.querySelector('#link').value,
 		nomlloc : document.querySelector('#nomlloc').value,
+		titolvideo : document.querySelector('#titolvideo').value,
+		descripciovideo : document.querySelector('#descripciovideo').value,
+		datapublicaciovideo : document.querySelector('#datapublicaciovideo').value,
 		latitud : document.querySelector('#latitud').value,
 		longitud : document.querySelector("#longitud").value
 	});
@@ -110,6 +119,9 @@ function add() {
 		document.querySelector('#datacreacio').value = '';
 		document.querySelector('#link').value = '';
 		document.querySelector('#nomlloc').value = '';
+		document.querySelector('#titolvideo').value = '';
+		document.querySelector('#descripciovideo').value = '';
+		document.querySelector('#datapublicaciovideo').value = '';
 		document.querySelector('#latitud').value = '';
 		document.querySelector('#longitud').value = '';
 		//alert('Persona afegida');
@@ -137,6 +149,9 @@ function load(id) {
 			DataCreacio: " + result.datacreacio + "\n\
 			Link: " + result.link + "\n\
 			NomLloc: " + result.nomlloc + "\n\
+			TitolVideo: " + result.titolvideo + "\n\
+			DescripcioVideo: " + result.descripciovideo + "\n\
+			DataPublicacioVideo: " + result.datapublicaciovideo + "\n\
 			Latitud: " + result.latitud + "\n\
 			Longitud: " + result.longitud);
 		}
@@ -222,13 +237,16 @@ function llistatComplert() {
 				<td>' + elements[key].datacreacio + '</td>\n\
 				<td>' + elements[key].link + '</td>\n\
 				<td>' + elements[key].nomlloc + '</td>\n\
+				<td>' + elements[key].titolvideo + '</td>\n\
+				<td>' + elements[key].descripciovideo + '</td>\n\
+				<td>' + elements[key].datapublicaciovideo + '</td>\n\
 				<td>' + elements[key].latitud + '</td>\n\
 				<td>' + elements[key].longitud + '</td>\n\
 				<td>\n\
 					<button type="button" onclick="load(' + elements[key].id + ');">Detalls</button>\n\
 				</td>\n\
 				<td>\n\
-					<button type="button" onclick="eliminaReg(' + elements[key].id + ');">GPS</button>\n\
+					<button type="button" onclick="changeGPS(' + elements[key].latitud + ', '+ elements[key].longitud +');">GPS</button>\n\
 				</td>\n\
 				<td>\n\
 					<button type="button" onclick="eliminaReg(' + elements[key].id + ');">Elimina</button>\n\
@@ -271,13 +289,16 @@ function llistatComplertByName() {
 				<td>' + elements[key].datacreacio + '</td>\n\
 				<td>' + elements[key].link + '</td>\n\
 				<td>' + elements[key].nomlloc + '</td>\n\
+				<td>' + elements[key].titolvideo + '</td>\n\
+				<td>' + elements[key].descripciovideo + '</td>\n\
+				<td>' + elements[key].datapublicaciovideo + '</td>\n\
 				<td>' + elements[key].latitud + '</td>\n\
 				<td>' + elements[key].longitud + '</td>\n\
 				<td>\n\
 					<button type="button" onclick="load(' + elements[key].id + ');">Detalls</button>\n\
 				</td>\n\
 				<td>\n\
-					<button type="button" onclick="eliminaReg(' + elements[key].id + ');">GPS</button>\n\
+					<button type="button" onclick="changeGPS(' + elements[key].latitud + ', '+ elements[key].longitud +');">GPS</button>\n\
 				</td>\n\
 				<td>\n\
 					<button type="button" onclick="eliminaReg(' + elements[key].id + ');">Elimina</button>\n\
@@ -319,13 +340,66 @@ function llistatComplertByLloc() {
 				<td>' + elements[key].datacreacio + '</td>\n\
 				<td>' + elements[key].link + '</td>\n\
 				<td>' + elements[key].nomlloc + '</td>\n\
+				<td>' + elements[key].titolvideo + '</td>\n\
+				<td>' + elements[key].descripciovideo + '</td>\n\
+				<td>' + elements[key].datapublicaciovideo + '</td>\n\
 				<td>' + elements[key].latitud + '</td>\n\
 				<td>' + elements[key].longitud + '</td>\n\
 				<td>\n\
 					<button type="button" onclick="load(' + elements[key].id + ');">Detalls</button>\n\
 				</td>\n\
 				<td>\n\
-					<button type="button" onclick="eliminaReg(' + elements[key].id + ');">GPS</button>\n\
+					<button type="button" onclick="changeGPS(' + elements[key].latitud + ', '+ elements[key].longitud +');">GPS</button>\n\
+				</td>\n\
+				<td>\n\
+					<button type="button" onclick="eliminaReg(' + elements[key].id + ');">Elimina</button>\n\
+				</td>\n\
+			</tr>';                        
+		}
+		elements = [];
+		document.getElementById("elementsList").innerHTML = outerHTML;
+		//document.querySelector("#elementsList").innerHTML = outerHTML;
+	};
+}
+
+function llistatComplertByTitolVideo() {
+	
+	var active = dataBase.result;
+	var data = active.transaction(["media"], "readonly"); //Al ser llistat, amb lectura és suficient
+	var object = data.objectStore("media"); //Col·lecció escollida en la BD
+	var index = object.index('by_titolvideo');     //Indexada per by_name
+	
+	var elements = []; //Contenidor 
+	
+	index.openCursor().onsuccess = function (e) {
+		var result = e.target.result;
+		if (result === null) { //Es retorna quan el punter de continue() arriba al final
+			return;
+		}
+		elements.push(result.value); //Afegir en taula d'elements
+		result.continue(); //El mateix continue() dispara novament un event success
+						   //Per tant torna a entrar en aquesta funció (fins que result===null)
+	 };
+	
+	data.oncomplete = function() {
+		var outerHTML = '';
+		for (var key in elements) {
+			outerHTML += '\n\
+			<tr>\n\
+				<td>' + elements[key].nomcanal + '</td>\n\
+				<td>' + elements[key].datacreacio + '</td>\n\
+				<td>' + elements[key].link + '</td>\n\
+				<td>' + elements[key].nomlloc + '</td>\n\
+				<td>' + elements[key].titolvideo + '</td>\n\
+				<td>' + elements[key].descripciovideo + '</td>\n\
+				<td>' + elements[key].datapublicaciovideo + '</td>\n\
+				<td>' + elements[key].latitud + '</td>\n\
+				<td>' + elements[key].longitud + '</td>\n\
+				<td>\n\
+					<button type="button" onclick="load(' + elements[key].id + ');">Detalls</button>\n\
+				</td>\n\
+				<td>\n\
+					<button type="button" onclick="changeGPS(' + elements[key].latitud + ', '+ elements[key].longitud +');">GPS</button>\n\
 				</td>\n\
 				<td>\n\
 					<button type="button" onclick="eliminaReg(' + elements[key].id + ');">Elimina</button>\n\
@@ -389,6 +463,9 @@ function llegirDadesXML(){
 			datacreacio : dia+mes+any,
 			link : link_,
 			nomlloc : nom_lloc,
+			titolvideo : titol,
+			descripciovideo: descripcio,
+			datapublicaciovideo: data_publicacio,
 			latitud : latitud,
 			longitud : longitud
 		});
@@ -472,3 +549,58 @@ function llegirDadesJSON(){
       oXML.open('GET', 'JSON/dades.json'); 
       oXML.send(''); 
     }
+
+function mapat(){
+	//Amb setView indica el Punt central i zoom inicial
+	mymap = L.map('mapid').setView([42.5, 1.55], 13);
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18, 
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(mymap);
+	//Afegir un Cercle vermell
+	L.circle([42.5, 1.55], 400, {
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+	}).addTo(mymap).bindPopup("Soc un cercle Vermell.");
+
+    // variable Contenidor del missatge popup
+	var popup = L.popup();
+	//Al clickar sobre el Mapa, s'activa el popup amb les coordenades Lat i Long 
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent("Has clickat el mapa en la posició : " + e.latlng.toString())
+			.openOn(mymap);
+	}
+	mymap.on('click', onMapClick);
+}
+
+function changeGPS(latitud, longitud){
+	mymap.eachLayer((layer) => {
+  		layer.remove();
+	});
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18, 
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(mymap);
+	L.marker([latitud, longitud]).addTo(mymap)
+		.bindPopup("<b>Bon dia</b><br />Soc un popup.").openPopup();
+
+		L.circle([latitud, longitud], 400, {
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+	}).addTo(mymap).bindPopup("Soc un cercle Vermell.");
+
+}
