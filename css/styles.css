@@ -624,3 +624,12 @@ h1 {
 .table-hover>tbody>tr:hover{
   background-color:grey;
 }
+
+.elements table, th, td {
+            border: 1px solid black;
+  border-collapse: collapse;
+         }
+		 
+	.elements th, td {
+  padding: 15px;
+} 

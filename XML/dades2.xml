@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PLATAFORMA SYSTEM "valida.dtd">
+<PLATAFORMA>
+	<CANAL id="id_001">
+		<NOM_CANAL>Canal Usuari 1</NOM_CANAL>
+		<DATA_CREACIO_CANAL>
+			<DIA>14</DIA>
+			<MES>10</MES>
+			<ANY>2012</ANY>
+		</DATA_CREACIO_CANAL>
+		<LINK>user1</LINK>
+		<NOM_LLOC>Carrer Francesc Carat</NOM_LLOC>
+		<LATITUD>42.465856</LATITUD>
+		<LONGITUD>1.490962</LONGITUD>
+		<VIDEO> 
+			<TITOL>Video 1 usuari 1</TITOL>
+			<DESCRIPCIO>Descripcio del video 1 del usuari 1</DESCRIPCIO>
+			<DATA_PUBLICACIO>28/10/2012</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 2 usuari 1</TITOL>
+			<DESCRIPCIO>Descripcio del video 2 del usuari 1</DESCRIPCIO>
+			<DATA_PUBLICACIO>02/11/2012</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 3 usuari 1</TITOL>
+			<DESCRIPCIO>Descripcio del video 3 del usuari 1</DESCRIPCIO>
+			<DATA_PUBLICACIO>05/02/2013</DATA_PUBLICACIO>
+		</VIDEO>
+	</CANAL>
+	<CANAL id="id_002">
+		<NOM_CANAL>Canal Usuari 2</NOM_CANAL>
+		<DATA_CREACIO_CANAL>
+			<DIA>25</DIA>
+			<MES>10</MES>
+			<ANY>2014</ANY>
+		</DATA_CREACIO_CANAL>
+		<LINK>user2</LINK>
+		<NOM_LLOC>609 Pont de Fontaneda, CG-1</NOM_LLOC>
+		<LATITUD>42.461542</LATITUD>
+		<LONGITUD>1.490499</LONGITUD>
+		<VIDEO> 
+			<TITOL>Video 1 usuari 2</TITOL>
+			<DESCRIPCIO>Descripcio del video 1 del usuari 2</DESCRIPCIO>
+			<DATA_PUBLICACIO>30/10/2014</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 2 usuari 2</TITOL>
+			<DESCRIPCIO>Descripcio del video 2 del usuari 2</DESCRIPCIO>
+			<DATA_PUBLICACIO>04/02/2015</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 3 usuari 2</TITOL>
+			<DESCRIPCIO>Descripcio del video 3 del usuari 2</DESCRIPCIO>
+			<DATA_PUBLICACIO>12/05/2015</DATA_PUBLICACIO>
+		</VIDEO>
+	</CANAL>
+	<CANAL id="id_003">
+		<NOM_CANAL>Canal Usuari 3</NOM_CANAL>
+		<DATA_CREACIO_CANAL>
+			<DIA>12</DIA>
+			<MES>10</MES>
+			<ANY>2010</ANY>
+		</DATA_CREACIO_CANAL>
+		<LINK>user3</LINK>
+		<NOM_LLOC>Cepsa, CG-1</NOM_LLOC>
+		<LATITUD>42.459725</LATITUD>
+		<LONGITUD>1.489096</LONGITUD>
+		<VIDEO> 
+			<TITOL>Video 1 usuari 3</TITOL>
+			<DESCRIPCIO>Descripcio del video 1 del usuari 3</DESCRIPCIO>
+			<DATA_PUBLICACIO>11/11/2011</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 2 usuari 3</TITOL>
+			<DESCRIPCIO>Descripcio del video 2 del usuari 3</DESCRIPCIO>
+			<DATA_PUBLICACIO>14/08/2012</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 3 usuari 3</TITOL>
+			<DESCRIPCIO>Descripcio del video 3 del usuari 3</DESCRIPCIO>
+			<DATA_PUBLICACIO>05/02/2013</DATA_PUBLICACIO>
+		</VIDEO>
+	</CANAL>
+	<CANAL id="id_004">
+		<NOM_CANAL>Canal Usuari 4</NOM_CANAL>
+		<DATA_CREACIO_CANAL>
+			<DIA>12</DIA>
+			<MES>10</MES>
+			<ANY>2010</ANY>
+		</DATA_CREACIO_CANAL>
+		<LINK>user4</LINK>
+		<NOM_LLOC>607 Riu d'Aubinyà, CG-1</NOM_LLOC>
+		<LATITUD>42.457916</LATITUD>
+		<LONGITUD>1.487724</LONGITUD>
+		<VIDEO> 
+			<TITOL>Video 1 usuari 4</TITOL>
+			<DESCRIPCIO>Descripcio del video 1 del usuari 4</DESCRIPCIO>
+			<DATA_PUBLICACIO>11/11/2011</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 2 usuari 4</TITOL>
+			<DESCRIPCIO>Descripcio del video 2 del usuari 4</DESCRIPCIO>
+			<DATA_PUBLICACIO>14/08/2012</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 3 usuari 4</TITOL>
+			<DESCRIPCIO>Descripcio del video 3 del usuari 4</DESCRIPCIO>
+			<DATA_PUBLICACIO>05/02/2013</DATA_PUBLICACIO>
+		</VIDEO>
+	</CANAL>
+	<CANAL id="id_005">
+		<NOM_CANAL>Canal Usuari 5</NOM_CANAL>
+		<DATA_CREACIO_CANAL>
+			<DIA>12</DIA>
+			<MES>10</MES>
+			<ANY>2010</ANY>
+		</DATA_CREACIO_CANAL>
+		<LINK>user5</LINK>
+		<NOM_LLOC>Camí de la Senyoreta</NOM_LLOC>
+		<LATITUD>42.451114</LATITUD>
+		<LONGITUD>1.486568</LONGITUD>
+		<VIDEO> 
+			<TITOL>Video 1 usuari 5</TITOL>
+			<DESCRIPCIO>Descripcio del video 1 del usuari 5</DESCRIPCIO>
+			<DATA_PUBLICACIO>11/11/2011</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 2 usuari 5</TITOL>
+			<DESCRIPCIO>Descripcio del video 2 del usuari 5</DESCRIPCIO>
+			<DATA_PUBLICACIO>14/08/2012</DATA_PUBLICACIO>
+		</VIDEO>
+		<VIDEO> 
+			<TITOL>Video 3 usuari 5</TITOL>
+			<DESCRIPCIO>Descripcio del video 3 del usuari 5</DESCRIPCIO>
+			<DATA_PUBLICACIO>05/02/2013</DATA_PUBLICACIO>
+		</VIDEO>
+	</CANAL>
+</PLATAFORMA>

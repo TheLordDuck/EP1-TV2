@@ -16,7 +16,6 @@ body {
     font-family: 'Oswald';font-size: 16px;
 }
 </style>
-<script src="js/llegirXML-JSON.js"></script>
 <script src="js/ex_ajudaTV2.3.js"></script>
 <script src="js/taula.js"></script>
   </head>
@@ -84,25 +83,39 @@ body {
 	</div>
 	<div id="taulaInfo" class="table-responsive">-->
     </div>
-    	<div>DNI</div>
-    	<div><input type="text" id="dni" placeholder="Entra DNI" /></div>
-    	<div>nom</div>
-        <div><input type="text" id="name" placeholder="Entra nom" /></div>
-        <div>cognom</div>
-        <div><input type="text" id="surname" placeholder="Entra Cognom" /></div>
+    	<div>NomCanal</div>
+    	<div><input type="text" id="nomcanal" placeholder="Entra NomCanal" /></div>
+		<div>DataCreacio</div>
+    	<div><input type="text" id="datacreacio" placeholder="Entra DataCreacio" /></div>
+		<div>Link</div>
+    	<div><input type="text" id="link" placeholder="Entra Link" /></div>
+		<div>NomLloc</div>
+    	<div><input type="text" id="nomlloc" placeholder="Entra NomLloc" /></div>
+    	<div>Latitud</div>
+        <div><input type="text" id="latitud" placeholder="Entra Latitud" /></div>
+        <div>Longitud</div>
+        <div><input type="text" id="longitud" placeholder="Entra Longitud" /></div>
   		<button id="importarXML">ImportaDADES_XML</button>
   		<button id="importarJSON">ImportaDADES_JSON</button>
-		<button id="llistar">Llistat Ordenat</button>
+		<button id="llistarNomCanal">Llistat Ordenat NomCanal</button>
+		<button id="llistarNomLloc">Llistat Ordenat NomLloc</button>
 		<button id="afegir">Afegir</button>
 		<button id="netejar">Neteja BD</button>
         <hr />
         <div id="elements">
             <table>
-                <caption>Persones</caption>
+                <caption>Media</caption>
                 <thead>
                     <tr>
-                        <th>DNI</th>
-                        <th>Nom</th>
+                        <th>NomCanal</th>
+                        <th>DataCreacio</th>
+						<th>Link</th>
+						<th>NomLloc</th>
+						<th>Latitud</th>
+						<th>Longitud</th>
+						<th>Detalls</th>
+						<th>GPS</th>
+						<th>Elimina</th>
                         <th> </th>
                     </tr>
                 </thead>
